@@ -6,5 +6,9 @@ export default (
         <Group name="inputs" title="输入框">
             {require('../inputs/text/readme').default}
         </Group>
+        <Group name="layout" title="布局">
+            {require('../layout/text/readme').default}
+            {require('../layout/header/readme').default}
+        </Group>
     </Document>
 );

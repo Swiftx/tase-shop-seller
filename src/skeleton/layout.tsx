@@ -48,7 +48,6 @@ export const Layout = (props:LayoutProps) => (
                 </div>
                 </Sider>
                 <Content style={contentStyle}>
-                    <Switch>
                     {React.Children.map(props.children, (child:React.ReactElement<any>) => {
                         if(child.type !== Group && child.type !== Page ) return child;
                         return React.cloneElement(child, {
@@ -56,7 +55,6 @@ export const Layout = (props:LayoutProps) => (
                             menu:false
                         });
                     })}
-                    </Switch>
                 </Content>
             </AntLayout>
         </Content>

@@ -40,13 +40,14 @@ export const Group = (props:GroupProps) => {
                 </ul>
             </div>
         );
-    } else {
-        return (
-        <div>{React.Children.map(props.children, (child:React.ReactElement<any>) => {
-            if(child.type === Group || child.type === Page )
-                return React.cloneElement(child, {prefix : prefix});
-            return child;
-        })}</div>);
-
     }
+    return (
+        <div>
+            {React.Children.map(props.children, (child:React.ReactElement<any>) => {
+                if(child.type === Group || child.type === Page )
+                    return React.cloneElement(child, {prefix : prefix});
+                return child;
+            })}
+        </div>
+    );
 };

@@ -15,8 +15,8 @@ const SellerPage = () => (
         <Page title="主页" name="home" icon="home">
             <h1>Hello World</h1>
         </Page>
-        <Group name="inputs" title="输入框" icon="environment-o">
-            <Page title="欢迎页面" name="test">Hello</Page>
+        <Group name="manager" title="管理" icon="hdd">
+            {require("./pages/manager/resource").default}
         </Group>
     </Layout>
 );
